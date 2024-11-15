@@ -1,0 +1,16 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(background-image);">
+  <div class="container">
+    <h1>Movie Record</h1>
+    <p>Create lists. Add movies</p>
+    <%= link_to "Create List", new_list_path%>
+  </div>
+</div>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= list.name %></li>
+    <%= link_to "Check", list_path(list), class: 'btn btn-primary'%>
+  <% end %>
+</ul>
+
+<%= link_to "Create List", new_list_path%>
