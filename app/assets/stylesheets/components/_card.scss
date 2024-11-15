@@ -1,4 +1,4 @@
-.card {
+.card list {
   overflow: hidden;
   background: #E2F1E7;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -7,6 +7,19 @@
   border: solid white;
   float: left;
   height: 200px;
+}
+
+.card movie {
+  background-color: #219B9D;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 5px;
+  border: solid #ffffff;
+  float: left;
+  height: 200px;
+}
+
+.card movie description {
+  font-size: 12px;
 }
 
 .card > img {
@@ -31,6 +44,7 @@
   position: absolute;
 }
 
+// index cards
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -9,13 +9,13 @@
 
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card">
+      <div class="card list">
         <div class="row">
           <% if list.photo.attached? %>
             <%= cl_image_tag list.photo.key %>
-    <% else %>
-  <%= image_tag 'https://images5.alphacoders.com/102/1022332.jpg' %>
-<% end %>
+          <% else %>
+            <%= image_tag 'https://images5.alphacoders.com/102/1022332.jpg' %>
+          <% end %>
           <div class="card-info">
             <div>
               <p><%= list.name %></p>
