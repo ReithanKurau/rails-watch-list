@@ -9,7 +9,7 @@
 
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card list">
+      <div class="card">
         <div class="row">
           <% if list.photo.attached? %>
             <%= cl_image_tag list.photo.key %>

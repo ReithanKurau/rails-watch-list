@@ -1,4 +1,4 @@
-.card list {
+.card {
   overflow: hidden;
   background: #E2F1E7;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -44,7 +44,6 @@
   position: absolute;
 }
 
-// index cards
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
