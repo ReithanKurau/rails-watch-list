@@ -20,6 +20,8 @@
             <div>
               <p><%= list.name %></p>
               <%= link_to "Check", list_path(list), class: "button"%>
+              <%= link_to 'Delete',
+               list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button' %>
             </div>
           </div>
         </div>

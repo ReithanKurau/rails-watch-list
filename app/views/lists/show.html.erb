@@ -20,6 +20,8 @@
     <div class="card movie description">
       <p><%= movie.overview %></p>
     </div>
+    <%= link_to 'Delete',
+      list_bookmark_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button' %>
   </div>
   <% end %>
 </div>
