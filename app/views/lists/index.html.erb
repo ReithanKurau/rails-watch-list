@@ -6,7 +6,6 @@
   </div>
 </div>
 
-
   <div class="cards">
     <% @lists.each do |list| %>
       <div class="card">
@@ -17,13 +16,16 @@
             <%= image_tag 'https://images5.alphacoders.com/102/1022332.jpg' %>
           <% end %>
           <div class="card-info">
-            <div>
+            <div class="card-content">
               <p><%= list.name %></p>
-              <%= link_to "Check", list_path(list), class: "button"%>
-              <%= link_to 'Delete',
-               list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button' %>
+              <div><%= link_to "Check", list_path(list),
+              class: "button",
+              style: "text-decoration: none" %></div>
+              <div class="btn-delete"><%= link_to "X", list_path(list),
+              data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+              class: "button",
+              style: "text-decoration: none" %></div>
             </div>
-          </div>
         </div>
       </div>
     <% end %>
